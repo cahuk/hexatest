@@ -1,0 +1,26 @@
+{
+    "name": "cahuk/image-downloader",
+    "type": "library",
+    "description": "Set site url for parse and download images",
+    "keywords": ["parse image","image parser","download image"],
+    "homepage": "https://github.com/cahuk/imageDownloader",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandr Cholovsky",
+            "email": "webcahuk@gmail.com",
+            "homepage": "http://gotit.com.ua",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "cahuk/checking": "dev-master",
+        "duncan3dc/domparser": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "cahuk\\imageDownloader\\": "src/"
+        }
+    }
+}

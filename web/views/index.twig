@@ -1,0 +1,23 @@
+{% extends "layout.twig" %}
+
+{% block title %}Main{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <h1>Пожалуйста введите ссылку для парсинга изображений!</h1>
+    <form class="form-horizontal" action="#" method="post">
+        <div class="form-group">
+            <label for="url" class="col-md-1 control-label">URL:</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="url" id="url" pattern="http(s)?://(www\.)?[\w\/\s.-]+" required placeholder="http://gotit.com.ua">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-1 col-sm-4">
+                <button type="submit" class="btn btn-success">Получить изображения</button>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "layout.twig" %}
+
+{% block title %}Result{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <h1>Результат работы парсинга</h1>
+        <div class="row">
+            <p class="bg-info">На странице {{ url }} доступно <strong>{{ allImages | length }}</strong> изображений для скачивания</p>
+        </div>
+
+        {% if uploadedImages %}
+            <div class="row">
+                <p class="bg-success">Изображения загружены в директорию: {{ directoryPath }}</p>
+                <ul>
+                    {% for item in uploadedImages %}
+                    <li><a href="{{ item }}" title="item" target="_blank">{{ item }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        {% if imagesBadMimeTypes %}
+            <div class="row">
+                <p class="bg-danger">Mime types данных изображение не доступны:</p>
+                <ul>
+                    {% for item in imagesBadMimeTypes %}
+                        <li><a href="{{ item }}">{{ item }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <a href="/" class="btn btn-default">Вернуться назад</a>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{
+    "config": {
+        "disable-tls": true
+    },
+    "require": {
+        "cahuk/image-downloader": "dev-master",
+        "cahuk/checking": "dev-master",
+        "anlutro/curl": "^1.4",
+        "duncan3dc/domparser": "^1.4",
+        "silex/silex": "^2.0",
+        "twig/twig": "^1.24",
+        "symfony/twig-bridge": "^3.1"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "cahuk/checking",
+    "type": "library",
+    "description": "Perform some verifications",
+    "keywords": ["check","test","checking"],
+    "homepage": "https://github.com/cahuk/checking",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandr Cholovsky",
+            "email": "webcahuk@gmail.com",
+            "homepage": "http://gotit.com.ua",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "cahuk\\checking\\components\\": "components/"
+        }
+    }
+}
